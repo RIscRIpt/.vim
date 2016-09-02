@@ -1,0 +1,45 @@
+set backspace=indent,eol,start
+
+set number
+set ruler
+set autoindent
+set nowrap
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set hlsearch
+set incsearch
+
+inoremap jk <ESC>
+inoremap <ESC> <NOP>
+
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
+nnoremap    v   <C-v>
+nnoremap <C-v>     v
+
+vnoremap    v   <C-v>
+vnoremap <C-v>     v
+
+noremap <C-s> :up<CR>
+inoremap <C-s> <C-o>:up<CR>
+
+
+noremap <silent> <A-=> <C-w>=
+noremap <silent> <A-j> <C-w>-
+noremap <silent> <A-k> <C-w>+
+noremap <silent> <A-h> <C-w><
+noremap <silent> <A-l> <C-w>>
+noremap <silent> <A-w> <C-w><C-w>
+noremap <silent> <A-q> <C-w><S-w>
+noremap <silent> <C-h> :vsc Window.MovetoNextTabGroup<CR>
+noremap <silent> <C-l> :vsc Window.MovetoPreviousTabGroup<CR>
+
+inoremap <S-Enter> <C-o>O
+nnoremap <S-Enter> O<Esc>j
+nnoremap <CR> o<Esc>k
+
