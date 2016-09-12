@@ -1,4 +1,4 @@
-let g:go#use_vimproc                 = 0
+let g:go#use_vimproc                 = 1
 let g:go_highlight_functions         = 1
 let g:go_highlight_methods           = 1
 let g:go_highlight_structs           = 1
