@@ -4,7 +4,6 @@ call plug#begin(expand($VIMDIR . '/plugged'))
 
 " Color schemes
 Plug 'altercation/vim-colors-solarized'
-Plug 'pbrisbin/vim-colors-off'
 
 " Visual
 Plug 'vim-airline/vim-airline-themes' | Plug 'vim-airline/vim-airline'
@@ -33,7 +32,7 @@ Plug 'Shougo/echodoc.vim'
 "         endif
 "     endif
 " endfunction
-Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'Shougo/context_filetype.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/neco-syntax'
@@ -47,7 +46,7 @@ Plug 'PeterRincker/vim-argumentative'
 
 " Language specific
 " Go
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'garyburd/go-explorer'
 
 " Tools
