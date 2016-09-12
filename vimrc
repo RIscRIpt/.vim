@@ -1,18 +1,21 @@
 scriptencoding utf-8
 set encoding=utf-8
 
-source $VIMDIR/plugins.vim
+let mapleader = "\<Space>"
 
-" Basic vim setup
+let $VIMDIR = fnamemodify($MYVIMRC, ":p:h")
+
+" Swap (swpfiles) directory
 let &directory=expand($VIMDIR . "/swpfiles/")
+
+" Load plugins and their settings
+source $VIMDIR/plugins.vim
+"for f in split(glob($VIMDIR . '/settings/*.vim'), '\n')
+"    exe 'source' f
+"endfor
 
 filetype plugin indent on
 syntax on
-
-set backspace=indent,eol,start
-
-let g:solarized_termcolors = 256
-colorscheme solarized
 
 if has("gui_running")
     source $VIMDIR/gui.vim
@@ -21,6 +24,9 @@ if has("gui_running")
 else
     set background=dark
 endif
+
+let g:solarized_termcolors = 256
+colorscheme solarized
 
 if has('win32')
     noremap <silent> <F4>  :silent !start python<CR>
@@ -36,13 +42,12 @@ if has('directx')
     set renderoptions=type:directx,gamma:1.0,contrast:0.0,level:1,geom:1,renmode:5,taamode:1
 endif
 
-let mapleader = "\<Space>"
-
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 
+set backspace=indent,eol,start
 set showcmd
 set number
 set relativenumber
