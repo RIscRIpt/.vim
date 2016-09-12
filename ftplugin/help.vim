@@ -1,5 +1,5 @@
-nnoremap <buffer> <CR> <CR>
-nnoremap <buffer> <BS> <C-t>
+nmap <buffer> <CR> <CR>
+nmap <buffer> <BS> <C-t>
 
 setlocal scrolloff=999
 
