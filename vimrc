@@ -6,7 +6,7 @@ let mapleader = "\<Space>"
 let $VIMDIR = fnamemodify($MYVIMRC, ":p:h")
 
 " Swap (swpfiles) directory
-let &directory=expand($VIMDIR . "/swpfiles/")
+let &directory=expand($VIMDIR . "/swpfiles//")
 
 " Load plugins and their settings
 source $VIMDIR/plugins.vim
