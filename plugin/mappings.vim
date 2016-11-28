@@ -94,8 +94,6 @@ noremap <silent> <C-l> <C-w>l
 "vmap <expr> D       DVB_Duplicate()
 "let g:DVB_TrimWS = 1
 
-noremap <A-n> :Lexplore<CR>
-noremap <A-t> :TagbarToggle<CR>
 "nnoremap <leader>ff :FufFile<CR>
 "nnoremap <leader>fb :FufBuffer<CR>
 "nnoremap <leader>fl :FufLine<CR>

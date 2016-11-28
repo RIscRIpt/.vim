@@ -40,3 +40,6 @@ nmap <leader>= <Plug>AirlineSelectNextTab
 nnoremap <leader>` :tabfirst<CR>
 nnoremap <leader>0 :tablast<CR>
 
+" Theme
+let g:airline_theme='monochrome'
+
