@@ -6,7 +6,7 @@ let mapleader = "\<Space>"
 let $VIMDIR = fnamemodify($MYVIMRC, ":p:h")
 
 " Swap (swpfiles) directory
-let &directory=expand($VIMDIR . "/swpfiles/")
+let &directory=expand($VIMDIR . "/swpfiles//")
 
 " Load plugins and their settings
 source $VIMDIR/plugins.vim
@@ -26,7 +26,7 @@ else
 endif
 
 let g:solarized_termcolors = 256
-colorscheme solarized
+colorscheme off
 
 if has('win32')
     noremap <silent> <F4>  :silent !start python<CR>
@@ -52,6 +52,7 @@ set showcmd
 set number
 set relativenumber
 set ruler
+set breakindent
 set autoindent
 set nowrap
 set foldmethod=marker
@@ -77,4 +78,8 @@ set cryptmethod=blowfish2
 " auto-pairs settings
 let g:AutoPairsShortcutJump = ''
 "let g:AutoPairsFlyMode = 1
+
+" Transparent terminal background
+highlight Normal  ctermbg=none
+highlight NonText ctermbg=none
 

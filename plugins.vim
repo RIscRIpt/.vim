@@ -4,11 +4,13 @@ call plug#begin(expand($VIMDIR . '/plugged'))
 
 " Color schemes
 Plug 'altercation/vim-colors-solarized'
+Plug 'pbrisbin/vim-colors-off'
 
 " Visual
 Plug 'vim-airline/vim-airline-themes' | Plug 'vim-airline/vim-airline'
 
 " Editing
+Plug 'easymotion/vim-easymotion'
 Plug 'chrisbra/NrrwRgn'
 Plug 'godlygeek/tabular'
 Plug 'zirrostig/vim-schlepp'
@@ -23,23 +25,18 @@ Plug 'tpope/vim-commentary'
 
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/echodoc.vim'
-" function! Build_vimproc(info)
-"     if a:info.status == 'installed' || a:info.status == 'updated' || a:info.force
-"         if has('win32')
-"             execute '!vsenv && nmake -f make_msvc.mak nodebug=1'
-"         else
-"             execute '!make'
-"         endif
-"     endif
-" endfunction
 Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'Shougo/context_filetype.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/neco-syntax'
 Plug 'Shougo/neopairs.vim'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimfiler.vim'
 "Plug 'SirVer/ultisnips'
 
 Plug 'majutsushi/tagbar'
+
+Plug 'scrooloose/syntastic'
 
 " Custom text objects
 Plug 'PeterRincker/vim-argumentative'
@@ -48,6 +45,14 @@ Plug 'PeterRincker/vim-argumentative'
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'garyburd/go-explorer'
+" LaTeX
+Plug 'lervag/vimtex'
+" R
+Plug 'jalvesaq/Nvim-R'
+" Haskell
+Plug 'lukerandall/haskellmode-vim'
+Plug 'eagletmt/neco-ghc'
+Plug 'eagletmt/ghcmod-vim'
 
 " Tools
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
