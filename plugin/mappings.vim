@@ -38,6 +38,17 @@ nnoremap <Right> zl
 nnoremap <Down>  <C-e>
 nnoremap <Left>  zh
 
+" Easier cprev/cnext browsing
+nnoremap <A-[> :cprev<CR>
+nnoremap <A-]> :cnext<CR>
+nnoremap <A-\> :cclose<CR>
+
+" Reload file
+nnoremap <A-r>   :e<CR>G
+
+" Run :make
+nnoremap <A-m> :make<CR>
+
 """""""""""""""" Leader mappings
 " Enter substitute command
 nnoremap <leader>ss :%s//
@@ -55,14 +66,9 @@ nnoremap <leader>ev :tabe $MYVIMRC<CR>
 " Repeat last command
 nnoremap <leader>. @:
 
-nnoremap <A-[> :cprev<CR>
-nnoremap <A-]> :cnext<CR>
-nnoremap <A-\> :cclose<CR>
-
 noremap <C-s> :up<CR>
 inoremap <C-s> <C-o>:up<CR>
 
-nnoremap <A-r>   :e<CR>G
 
 vmap <S-Up>    <Plug>SchleppIndentUp
 vmap <S-Down>  <Plug>SchleppIndentDown

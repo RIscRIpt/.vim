@@ -5,9 +5,11 @@ call plug#begin(expand($VIMDIR . '/plugged'))
 " Color schemes
 Plug 'altercation/vim-colors-solarized'
 Plug 'pbrisbin/vim-colors-off'
+Plug 'reedes/vim-colors-pencil'
 
 " Visual
-Plug 'vim-airline/vim-airline-themes' | Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Editing
 Plug 'easymotion/vim-easymotion'

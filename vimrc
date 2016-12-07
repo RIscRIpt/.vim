@@ -5,14 +5,24 @@ let mapleader = "\<Space>"
 
 let $VIMDIR = fnamemodify($MYVIMRC, ":p:h")
 
-" Swap (swpfiles) directory
-let &directory=expand($VIMDIR . "/swpfiles//")
+if exists("$SUDO_USER")
+    set nobackup
+    set nowritebackup
+    set noswapfile
+    set noundofile
+    set viminfo=
+    set viewdir=
+else
+    let &backupdir=expand($VIMDIR . "/backup")
+    let &directory=expand($VIMDIR . "/swpfiles//")
+    let &undodir=expand($VIMDIR . "/undo")
+    let &viewdir=expand($VIMDIR . "/view")
 
-" Load plugins and their settings
+    set undofile
+endif
+
+" Load plugins
 source $VIMDIR/plugins.vim
-"for f in split(glob($VIMDIR . '/settings/*.vim'), '\n')
-"    exe 'source' f
-"endfor
 
 filetype plugin indent on
 syntax on
@@ -26,7 +36,8 @@ else
 endif
 
 let g:solarized_termcolors = 256
-colorscheme off
+
+colorscheme pencil
 
 if has('win32')
     noremap <silent> <F4>  :silent !start python<CR>
@@ -44,17 +55,20 @@ endif
 
 set keymap=russian-jcukenwin
 set iminsert=0
-set imsearch=0
-highlight lCursor guifg=NONE guibg=Cyan
+set imsearch=-1
 
 set backspace=indent,eol,start
 set showcmd
 set number
 set relativenumber
 set ruler
-set breakindent
+set smarttab
 set autoindent
+set smartindent
+set breakindent
+set showbreak=↳
 set nowrap
+set formatoptions+=nj
 set foldmethod=marker
 "set cursorline
 "set cursorcolumn
@@ -62,24 +76,30 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set shiftround
 "set colorcolumn=80
 "call matchadd('ColorColumn', '\%80v')
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 set hidden
 set scrolloff=8
-set listchars=tab:\¦\ ,trail:·,nbsp:░
+set sidescrolloff=8
 set list
-highlight SpecialKey guibg=NONE
+set listchars=tab:\¦\ ,trail:·,nbsp:░,extends:»,precedes:«
+set lazyredraw
+set shortmess+=aoOtTWAI
+set splitbelow
+set splitright
+set wildmenu
+set wildmode=longest:full,full
 
 set cryptmethod=blowfish2
 
-"
-" auto-pairs settings
-let g:AutoPairsShortcutJump = ''
-"let g:AutoPairsFlyMode = 1
-
 " Transparent terminal background
-highlight Normal  ctermbg=none
-highlight NonText ctermbg=none
+highlight   Normal       ctermbg=none
+highlight   NonText      ctermbg=none
+highlight   SpecialKey   guibg=NONE
+highlight   lCursor      guifg=NONE     guibg=#D75F5F
 
