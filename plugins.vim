@@ -55,6 +55,9 @@ Plug 'jalvesaq/Nvim-R'
 Plug 'lukerandall/haskellmode-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'eagletmt/ghcmod-vim'
+" JavaScript / TypeScript
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
 
 " Tools
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
