@@ -3,7 +3,12 @@ set encoding=utf-8
 
 let mapleader = "\<Space>"
 
-let $VIMDIR = fnamemodify($MYVIMRC, ":p:h")
+"let $VIMDIR = fnamemodify($MYVIMRC, ":p:h")
+if has('win32')
+    let $VIMDIR = "~/vimfiles"
+else
+    let $VIMDIR = "~/.vim"
+endif
 
 if exists("$SUDO_USER")
     set nobackup
