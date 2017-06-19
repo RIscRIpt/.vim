@@ -3,6 +3,7 @@ source $VIMDIR/vim-plug/plug.vim
 call plug#begin(expand($VIMDIR . '/plugged'))
 
 " Color schemes
+Plug 'google/vim-colorscheme-primary'
 Plug 'altercation/vim-colors-solarized'
 Plug 'pbrisbin/vim-colors-off'
 Plug 'reedes/vim-colors-pencil'
@@ -25,9 +26,9 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 "Plug 'tomtom/tcomment_vim'
 
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/echodoc.vim'
-Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'Shougo/context_filetype.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/neco-syntax'
@@ -36,8 +37,10 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 "Plug 'SirVer/ultisnips'
 
-Plug 'majutsushi/tagbar'
+Plug 'google/vim-codefmt'
 
+Plug 'google/vim-searchindex'
+Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 
 " Custom text objects
@@ -58,10 +61,14 @@ Plug 'eagletmt/ghcmod-vim'
 " JavaScript / TypeScript
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
+" Graphviz
+Plug 'wannesm/wmgraphviz.vim'
 
 " Tools
+Plug 'google/vim-maktaba'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 call plug#end()
 

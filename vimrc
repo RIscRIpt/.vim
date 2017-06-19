@@ -42,7 +42,7 @@ endif
 
 let g:solarized_termcolors = 256
 
-colorscheme pencil
+colorscheme solarized
 
 if has('win32')
     noremap <silent> <F4>  :silent !start python<CR>

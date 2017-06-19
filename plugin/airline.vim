@@ -41,5 +41,5 @@ nnoremap <leader>` :tabfirst<CR>
 nnoremap <leader>0 :tablast<CR>
 
 " Theme
-let g:airline_theme='monochrome'
+let g:airline_theme='solarized'
 
