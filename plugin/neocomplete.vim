@@ -6,7 +6,7 @@ let g:neocomplete#enable_camel_case = 1
 let g:neocomplete#enable_cursor_hold_i = 1
 let g:neocomplete#enable_auto_delimiter = 1
 let g:neocomplete#enable_multibyte_completion = 1
-let g:neocomplete#data_directory = expand("~/.trash/nc_cache/")
+let g:neocomplete#data_directory = expand("$VIMDIR/nc_cache/")
 
 if !exists('g:neocomplete#sources#omni#input_patterns')
     let g:neocomplete#sources#omni#input_patterns = {}
