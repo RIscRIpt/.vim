@@ -71,7 +71,7 @@ set smarttab
 set autoindent
 set smartindent
 set breakindent
-set showbreak=↳
+let &showbreak='↳'
 set nowrap
 set formatoptions+=nj
 set foldmethod=marker

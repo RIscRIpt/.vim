@@ -1,9 +1,4 @@
 """""""""""""""""""""""""""""""" All/mixed modes
-" Swap ; and :
-nnoremap ; :
-nnoremap : ;
-vnoremap ; :
-vnoremap : ;
 
 " Swap visual and visual-block modes
 nnoremap    v   <C-v>
