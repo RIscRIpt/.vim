@@ -111,7 +111,7 @@ nnoremap <CR> o<Esc>k
 
 """""""""""""""""""""""""""""""" Insert mode
 " jk = ESC, ESC = Ctrl+^
-inoremap jk <ESC>
+inoremap <F13> <ESC>
 inoremap <ESC> <C-^>
 
 """""""""""""""""""""""""""""""" Command mode

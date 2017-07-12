@@ -3,8 +3,12 @@ source $VIMDIR/vim-plug/plug.vim
 call plug#begin(expand($VIMDIR . '/plugged'))
 
 " Color schemes
+if has('nvim')
+    Plug 'iCyMind/NeoSolarized'
+else
+    Plug 'altercation/vim-colors-solarized'
+endif
 Plug 'google/vim-colorscheme-primary'
-Plug 'altercation/vim-colors-solarized'
 Plug 'pbrisbin/vim-colors-off'
 Plug 'reedes/vim-colors-pencil'
 
@@ -26,8 +30,12 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 "Plug 'tomtom/tcomment_vim'
 
-Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
-Plug 'Shougo/neocomplete.vim'
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
+    Plug 'Shougo/neocomplete.vim'
+endif
 Plug 'Shougo/echodoc.vim'
 Plug 'Shougo/context_filetype.vim'
 Plug 'Shougo/neoinclude.vim'
@@ -66,9 +74,11 @@ Plug 'wannesm/wmgraphviz.vim'
 
 " Tools
 Plug 'google/vim-maktaba'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+if has('unix')
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+endif
 
 call plug#end()
 
