@@ -1,7 +1,9 @@
 scriptencoding utf-8
 set encoding=utf-8
+filetype plugin indent on
 
 let mapleader = "\<Space>"
+let maplocalleader = "\\"
 
 "let $VIMDIR = fnamemodify($MYVIMRC, ":p:h")
 if has('win32')
@@ -28,8 +30,8 @@ endif
 
 " Load plugins
 source $VIMDIR/plugins.vim
+source $VIMDIR/settings.vim
 
-filetype plugin indent on
 syntax on
 
 set background=dark
@@ -38,12 +40,18 @@ if has("gui_running")
     source $VIMDIR/ginit.vim
 endif
 
-let g:solarized_termcolors = 256
 
-if has('nvim')
-	colorscheme NeoSolarized
+if has('win32')
+    let g:airline_theme='solarized'
+    let g:solarized_termcolors = 256
+    if has('nvim')
+        colorscheme NeoSolarized
+    else
+        colorscheme solarized
+    endif
 else
-	colorscheme solarized
+    let g:airline_theme='wal'
+    colorscheme wal
 endif
 
 if has('win32')
@@ -73,6 +81,7 @@ set smarttab
 set autoindent
 set smartindent
 set breakindent
+set clipboard+=unnamedplus
 let &showbreak='↳'
 set nowrap
 set formatoptions+=nj
@@ -96,13 +105,16 @@ set sidescrolloff=8
 set list
 set listchars=tab:\¦\ ,trail:·,nbsp:░,extends:»,precedes:«
 set lazyredraw
+set mouse=a
 set shortmess+=aoOtTWAI
 set splitbelow
 set splitright
 set wildmenu
 set wildmode=longest:full,full
 
-set cryptmethod=blowfish2
+if has('cryptmethod')
+    set cryptmethod=blowfish2
+endif
 
 " Transparent terminal background
 highlight   Normal       ctermbg=none

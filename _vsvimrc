@@ -11,8 +11,7 @@ set softtabstop=4
 set hlsearch
 set incsearch
 
-inoremap jk <ESC>
-inoremap <ESC> <NOP>
+inoremap <F13> <ESC>
 
 nnoremap ; :
 nnoremap : ;
