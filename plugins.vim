@@ -26,23 +26,12 @@ Plug 'godlygeek/tabular'
 Plug 'zirrostig/vim-schlepp'
 
 Plug 'jiangmiao/auto-pairs'
-" Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
-"Plug 'tomtom/tcomment_vim'
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all --system-libclang --system-boost' }
-"if has('nvim')
-"    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"    Plug 'tweekmonster/deoplete-clang2'
-"    "Plug 'zchee/deoplete-clang'
-"    Plug 'zchee/deoplete-go', { 'do': 'make' }
-"else
-"    Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
-"    Plug 'Shougo/neocomplete.vim'
-"endif
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --go-completer --system-libclang --system-boost' }
 Plug 'Shougo/echodoc.vim'
 Plug 'Shougo/context_filetype.vim'
 Plug 'Shougo/neoinclude.vim'
@@ -64,28 +53,19 @@ Plug 'PeterRincker/vim-argumentative'
 " Language specific
 " C++
 Plug 'dawikur/algorithm-mnemonics.vim'
+" GLSL
+Plug 'tikhomirov/vim-glsl'
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'garyburd/go-explorer'
-" LaTeX
-Plug 'lervag/vimtex'
 " R
 Plug 'jalvesaq/Nvim-R'
-" Haskell
-Plug 'lukerandall/haskellmode-vim'
-Plug 'eagletmt/neco-ghc'
-Plug 'eagletmt/ghcmod-vim'
-" JavaScript / TypeScript
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
 " HTML5
 Plug 'othree/html5.vim'
+" LaTeX
+Plug 'lervag/vimtex'
 " Graphviz
 Plug 'wannesm/wmgraphviz.vim'
-" GLSL
-Plug 'tikhomirov/vim-glsl'
-" C#
-Plug 'OmniSharp/omnisharp-vim'
 
 " Tools
 Plug 'jamessan/vim-gnupg'
